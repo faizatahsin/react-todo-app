@@ -5,11 +5,11 @@ interface ITodo {
   count: number;
 }
 
-export const Todo: React.FC<ITodo> = (props) => {
+export const Todo: React.FC<ITodo> = ({ count, name }) => {
   return (
     <div>
-      <div>Name : {props.name}</div>
-      <div>Count : {props.count}</div>
+      <div>Name : {name}</div>
+      <div>Count : {count}</div>
     </div>
   );
 };
