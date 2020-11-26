@@ -5,7 +5,8 @@ import './styles/index.css';
 const App = () => {
   return (
     <div>
-      <Todo count={355} name="Arif" />
+      <Todo name="arif" count="30" status={true} />
+      <Todo name="faiza tahsin" count={30} status={false} desc="Nothing special !!💖" />
     </div>
   );
 };
