@@ -1,19 +1,10 @@
 import React from 'react';
-
-interface ITodo {
-  name: string;
-  count: number | string;
-  status: boolean;
-  desc?: string;
-}
+import { ITodo } from '../../types';
 
 export const TodoItem: React.FC<ITodo> = ({ count, name, status, desc }) => {
   return (
     <div className="text-white font-semibold bg-rose-200 p-5 rounded-md">
-      <div className="flex justify-between mb-2">
-        <h1 className="px-5 py-2 bg-rose-500 rounded-md">Name</h1>
-        <h1 className="px-5 py-2 bg-rose-500 rounded-md capitalize">{name}</h1>
-      </div>
+      <h1 className="text-gray-900 text-lg mb-2">{name}</h1>
       <div className="flex justify-between mb-2">
         <h1 className="px-5 py-2 bg-rose-500 rounded-md">Count</h1>
         <h1 className="px-5 py-2 bg-rose-500 rounded-md">{count}</h1>
