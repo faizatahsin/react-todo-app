@@ -1,13 +1,33 @@
 import React from 'react';
-import { Todo } from './components/Todo';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Footer } from './components/Footer';
+import { Navbar } from './components/Navbar';
+import CreateTodo from './pages/create';
+import Home from './pages/home';
+import ListTodo from './pages/list';
 import './styles/index.css';
 
 const App = () => {
   return (
-    <div>
-      <Todo name="arif" count="30" status={true} />
-      <Todo name="faiza tahsin" count={30} status={false} desc="Nothing special !!💖" />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen flex flex-col justify-between">
+        <Navbar />
+        <div className="flex-1 p-6">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/create">
+              <CreateTodo />
+            </Route>
+            <Route path="/list">
+              <ListTodo />
+            </Route>
+          </Switch>
+        </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 };
 

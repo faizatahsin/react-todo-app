@@ -7,9 +7,9 @@ interface ITodo {
   desc?: string;
 }
 
-export const Todo: React.FC<ITodo> = ({ count, name, status, desc }) => {
+export const TodoItem: React.FC<ITodo> = ({ count, name, status, desc }) => {
   return (
-    <div className="m-5 text-white font-semibold bg-rose-200 p-5 rounded-md">
+    <div className="text-white font-semibold bg-rose-200 p-5 rounded-md">
       <div className="flex justify-between mb-2">
         <h1 className="px-5 py-2 bg-rose-500 rounded-md">Name</h1>
         <h1 className="px-5 py-2 bg-rose-500 rounded-md capitalize">{name}</h1>
@@ -20,7 +20,7 @@ export const Todo: React.FC<ITodo> = ({ count, name, status, desc }) => {
       </div>
       <div className="flex justify-between mb-2">
         <h1 className="px-5 py-2 bg-rose-500 rounded-md">Status</h1>
-        <h1 className="px-5 py-2 bg-rose-500 rounded-md">{status ? <h1>Completed</h1> : <h1>Uncompleted</h1>}</h1>
+        <h1 className="px-5 py-2 bg-rose-500 rounded-md">{status ? <h1>Completed</h1> : <h1>Pending</h1>}</h1>
       </div>
       {desc && (
         <div className="">
