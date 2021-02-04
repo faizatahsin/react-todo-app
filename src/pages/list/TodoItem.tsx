@@ -11,7 +11,7 @@ export const TodoItem: React.FC<ITodo> = ({ count, name, status, desc }) => {
       </div>
       <div className="flex justify-between mb-2">
         <h1 className="px-5 py-2 bg-rose-500 rounded-md">Status</h1>
-        <h1 className="px-5 py-2 bg-rose-500 rounded-md">{status ? <h1>Completed</h1> : <h1>Pending</h1>}</h1>
+        <h1 className="px-5 py-2 bg-rose-500 rounded-md">{status ? 'Completed' : 'Pending'}</h1>
       </div>
       {desc && (
         <div className="">

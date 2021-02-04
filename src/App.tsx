@@ -11,7 +11,7 @@ import { ITodo } from './types';
 const App = () => {
   const [todos, setTodos] = useState<ITodo[]>([
     { name: 'Learn Redux', count: 1, status: false },
-    { name: 'Learn react', count: 1, status: false },
+    { name: 'Learn react', count: 1, status: false, desc: 'Learning!!' },
   ]);
   return (
     <BrowserRouter>
